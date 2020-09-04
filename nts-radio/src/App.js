@@ -1,24 +1,38 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './media/audio-file1.mp3'
+import MyPlayer from './components/MyPlayer'
+import Navigation from './components/Navigation'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>My Music player</h1>
+      <Navigation/>
+      <MyPlayer
+        urls={[
+          'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+           'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
+          'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
+        ]}
+      />
+      	{/* <div> 
+
+
+
+        <figure>
+            <figcaption>Listen</figcaption>
+            <audio
+                controls
+                src="./media/audio-file1.mp3">
+                    Your browser does not support the
+                    <code>audio</code> element.
+            </audio>
+        </figure>
+    
+	</div>  */}
+
     </div>
   );
 }
